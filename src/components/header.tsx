@@ -1,12 +1,7 @@
 import {
-    SignInButton,
-    SignUpButton,
     SignedIn,
-    SignedOut,
     UserButton,
 } from '@clerk/nextjs'
-import LoginButton from './ui/login-button'
-import SignupButton from './ui/signup-button'
 import { Code, Users } from 'lucide-react'
 import { Badge } from './ui/badge'
 

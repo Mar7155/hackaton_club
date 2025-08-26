@@ -2,8 +2,6 @@ import { Users, Zap, Trophy } from "lucide-react";
 import AnimatedText from "@/components/cursor-animation";
 import AnimatedLines from "@/components/animated-lines";
 import ASCIIText from "@/components/ascii-text";
-import { Button } from "@/components/ui/button";
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import LoginButtons from "@/components/ui/login-buttons";
 
 export default function Home() {

@@ -1,6 +1,6 @@
 "use client"
 
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs';
+import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs';
 import React from 'react'
 import { Button } from './button';
 
@@ -15,12 +15,12 @@ function loginbuttons() {
         return (
             <>
                 <SignInButton mode="modal">
-                    <Button className="bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-lg hover:opacity-90 hover:cursor-pointer">
+                    <Button variant={'primary'}>
                         Iniciar Sesión
                     </Button>
                 </SignInButton>
                 <SignUpButton mode="modal">
-                    <Button className="bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-lg hover:opacity-90 hover:cursor-pointer">
+                    <Button variant={'primary'}>
                         Unete 😼
                     </Button>
                 </SignUpButton>

@@ -2,10 +2,12 @@ import { Badge } from "@/components/ui/badge";
 import { Code, Users, Zap, Trophy } from "lucide-react";
 import AnimatedText from "@/components/cursor-animation";
 import AnimatedLines from "@/components/animated-lines";
+import ASCIIText from "@/components/ascii-text";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-background font-sans">
+    <div className="flex flex-col min-h-screen bg-background font-sans bg-gradient-to-b from-transparent via-green-400/10 to-blue-500/10 border-t">
       <div
         className="absolute inset-0 opacity-30"
         style={{
@@ -38,25 +40,25 @@ export default function Home() {
           </div>
           <Badge
             variant="secondary"
-            className="border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80"
+            className="border-transparent bg-secondary hover:bg-secondary/80 bg-gradient-to-r from-blue-400 to-blue-500 text-white shadow-lg hover:opacity-90"
           >
-            <Users className="mr-1 h-4 w-4" />
+            <Users className="mr-1 h-4 w-4 " />
             500+ Miembros
           </Badge>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="flex-1">
+      <main className="w-full">
         <div className="container py-12 px-12">
-          <div className="grid items-start gap-12 lg:grid-cols-2">
+          <div className="grid items-start lg:grid-cols-2">
             {/* Left Column: Information */}
             <div className="space-y-8">
               <div>
                 <AnimatedLines className="perspective-container">
-                <h2 className="mb-4 font-serif text-4xl font-bold text-foreground [text-shadow:var(--text-shadow-lg)]">
-                  Únete a Nuestra Comunidad de Programadores
-                </h2>
+                  <h2 className="mb-4 font-serif text-4xl font-bold text-foreground [text-shadow:var(--text-shadow-lg)]">
+                    Únete a Nuestra Comunidad de Programadores
+                  </h2>
                 </AnimatedLines>
                 <AnimatedText>
                   <div className="text-block">
@@ -113,6 +115,27 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Right Column: Information */}
+            <div className="relative h-96 w-full rounded-lg lg:h-full flex flex-col items-center justify-center gap-6">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <ASCIIText
+                  text="</hack>"
+                  enableWaves={true}
+                  asciiFontSize={10}
+                />
+              </div>
+
+              {/* Button Container */}
+              <div className="relative mt-96 flex flex-col sm:flex-row gap-4">
+                <Button className="bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-lg hover:opacity-90">
+                  Iniciar Sesión
+                </Button>
+                <Button className="bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-lg hover:opacity-90">
+                  Regístrate Aquí
+                </Button>
               </div>
             </div>
           </div>

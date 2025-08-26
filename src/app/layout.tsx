@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
-import { type Metadata } from 'next'
 import { ClerkProvider } from '@clerk/nextjs'
-import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/header';
 import { dark, experimental__simple } from '@clerk/themes';
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,27 +31,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
+      <ClerkProvider appearance={{ baseTheme: [dark] }}>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
+          <Header />
             {children}
           </ThemeProvider>
-      </body>
+          <Footer />
+        </body>
+      </ClerkProvider>
     </html>
   );
-    <ClerkProvider appearance={{baseTheme: [dark]}}>
-      <html lang="en">
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <Header />
-          {children}
-        </body>
-      </html>
-    </ClerkProvider>
-  )
 }

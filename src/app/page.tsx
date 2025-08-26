@@ -1,13 +1,14 @@
-import { Badge } from "@/components/ui/badge";
-import { Code, Users, Zap, Trophy } from "lucide-react";
+import { Users, Zap, Trophy } from "lucide-react";
 import AnimatedText from "@/components/cursor-animation";
 import AnimatedLines from "@/components/animated-lines";
 import ASCIIText from "@/components/ascii-text";
 import { Button } from "@/components/ui/button";
+import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import LoginButtons from "@/components/ui/login-buttons";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-background font-sans bg-gradient-to-b from-transparent via-green-400/10 to-blue-500/10 border-t">
+    <div className="flex flex-col bg-background font-sans bg-gradient-to-b from-transparent via-green-400/10 to-blue-500/10 border-t">
       <div
         className="absolute inset-0 opacity-30"
         style={{
@@ -22,34 +23,8 @@ export default function Home() {
             "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,1) 40%)",
         }}
       />
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-10 py-2">
-        <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-              <Code className="h-6 w-6 text-primary-foreground" />
-            </div>
-            <div>
-              <h1 className="font-serif text-xl font-bold text-foreground">
-                HackatonClub
-              </h1>
-              <p className="text-sm text-muted-foreground">
-                Comunidad de Programadores
-              </p>
-            </div>
-          </div>
-          <Badge
-            variant="secondary"
-            className="border-transparent bg-secondary hover:bg-secondary/80 bg-gradient-to-r from-blue-400 to-blue-500 text-white shadow-lg hover:opacity-90"
-          >
-            <Users className="mr-1 h-4 w-4 " />
-            500+ Miembros
-          </Badge>
-        </div>
-      </header>
-
       {/* Main Content */}
-      <main className="w-full">
+      <main className="w-full min-h-screen flex justify-center items-center">
         <div className="container py-12 px-12">
           <div className="grid items-start lg:grid-cols-2">
             {/* Left Column: Information */}
@@ -129,28 +104,13 @@ export default function Home() {
               </div>
 
               {/* Button Container */}
-              <div className="relative mt-96 flex flex-col sm:flex-row gap-4">
-                <Button className="bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-lg hover:opacity-90">
-                  Iniciar Sesión
-                </Button>
-                <Button className="bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-lg hover:opacity-90">
-                  Regístrate Aquí
-                </Button>
+              <div className="relative mt-96 flex gap-4 justify-center items-center">
+                <LoginButtons />
               </div>
             </div>
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-sidebar border-t border-sidebar-border mt-16 z-1">
-        <div className="max-w-6xl mx-auto px-4 py-8 text-center">
-          <p className="text-muted-foreground">
-            © 2025 HackatonClub. Construyendo el futuro de la programación
-            juntos.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }

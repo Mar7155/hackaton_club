@@ -21,13 +21,10 @@ function header() {
                     </div>
                 </div>
                 <div className='gap-8 flex items-center justify-between'>
-                    <Badge variant="secondary" className="border-transparent bg-secondary hover:bg-secondary/80 bg-gradient-to-r from-blue-400 to-blue-500 text-white shadow-lg hover:opacity-90">
-                        <Users className="mr-1 h-4 w-4 " />
-                        +4 Miembros
-                    </Badge>
                     <SignedIn>
                         <UserButton></UserButton>
                     </SignedIn>
+                    <ModeToggle />
                 </div>
             </div>
         </header>

@@ -30,16 +30,16 @@ export default function Home() {
               <div>
                 <AnimatedLines className="perspective-container">
                   <h2 className="mb-4 font-serif text-4xl font-bold text-foreground [text-shadow:var(--text-shadow-lg)]">
-                    Únete a Nuestra Comunidad de Programadores
+                    Únete a la Comunidad de Programadores
                   </h2>
                 </AnimatedLines>
                 <AnimatedText>
                   <div className="text-block">
                     <p>
                       Conecta con desarrolladores de todos los niveles,
-                      participa en proyectos colaborativos y acelera tu
-                      crecimiento profesional en un ambiente de aprendizaje
-                      continuo.
+                      y acelera tu crecimiento profesional en un ambiente 
+                      de aprendizaje continuo para participar en hackatones 
+                      de todo tipo.
                     </p>
                   </div>
                 </AnimatedText>
@@ -48,29 +48,29 @@ export default function Home() {
               {/* Benefits Section */}
               <div className="grid gap-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                    <Zap className="h-6 w-6 text-primary" />
+                  <div className="flex h-12 w-12 bg-accent-trophy/10 flex-shrink-0 items-center justify-center rounded-lg">
+                    <Trophy className="h-6 w-6 text-accent-trophy" />
                   </div>
                   <div>
                     <h3 className="mb-1 font-serif font-semibold text-foreground [text-shadow:var(--text-shadow-sm)]">
-                      Proyectos Colaborativos
+                      Hackatones Colaborativos
                     </h3>
                     <p className="text-muted-foreground">
-                      Trabaja en proyectos reales con otros desarrolladores.
+                      Trabaja en equipo con otros desarrolladores para competir en hackatones.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent-trophy/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Trophy className="w-6 h-6 text-accent-trophy" />
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 bg-primary/10">
+                    <Zap className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="mb-1 font-serif font-semibold text-foreground [text-shadow:var(--text-shadow-sm)]">
-                      Mentorías y Workshops
+                      Mentorías y Entrenamiento
                     </h3>
                     <p className="text-muted-foreground">
-                      Aprende de expertos y mejora tus habilidades.
+                      Mejora tus habilidades con ejercicios practicos y asesorias en equipo.
                     </p>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ export default function Home() {
                       Networking
                     </h3>
                     <p className="text-muted-foreground">
-                      Conecta con profesionales de la industria.
+                      Conecta con más compañeros y aprende de ellos.
                     </p>
                   </div>
                 </div>

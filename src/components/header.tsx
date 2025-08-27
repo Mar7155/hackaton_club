@@ -25,7 +25,7 @@ function header() {
                 <div className='gap-8 flex items-center justify-between'>
                     <Badge variant="secondary" className="border-transparent bg-secondary hover:bg-secondary/80 bg-gradient-to-r from-blue-400 to-blue-500 text-white shadow-lg hover:opacity-90">
                         <Users className="mr-1 h-4 w-4 " />
-                        2 Miembros
+                        +4 Miembros
                     </Badge>
                     <SignedIn>
                         <UserButton></UserButton>
@@ -35,5 +35,4 @@ function header() {
         </header>
     )
 }
-
 export default header

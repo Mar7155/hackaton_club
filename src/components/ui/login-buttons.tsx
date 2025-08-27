@@ -1,14 +1,28 @@
 "use client"
 
-import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs';
+import { SignInButton, SignUpButton, useOrganizationList, UserButton, useUser } from '@clerk/nextjs';
 import React from 'react'
 import { Button } from './button';
 
 function loginbuttons() {
     const { isSignedIn, user, isLoaded } = useUser();
+    const { } = useOrganizationList
 
     if (!isLoaded) {
-        return <div>Loading...</div>;
+        return (
+            <>
+                <SignInButton mode="modal">
+                    <Button variant={'primary'}>
+                        Iniciar Sesión
+                    </Button>
+                </SignInButton>
+                <SignUpButton mode="modal">
+                    <Button variant={'primary'}>
+                        Unete 😼
+                    </Button>
+                </SignUpButton>
+            </>
+        )
     }
 
     if (!isSignedIn) {

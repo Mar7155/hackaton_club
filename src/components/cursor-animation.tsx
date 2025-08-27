@@ -22,9 +22,9 @@ const AnimatedText: FC<AnimatedTextProps> = ({ children, className }) => {
 
     const element = textRef.current;
     if (!element) return;
-    
+
     // La animación ahora buscará el primer <p> dentro del componente
-    const targetParagraph = element.querySelector('p');
+    const targetParagraph = element.querySelector("p");
     if (!targetParagraph) return;
 
     const st = SplitText.create(targetParagraph, {

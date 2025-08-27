@@ -34,7 +34,6 @@ const AnimatedWords: FC<AnimatedWordsProps> = ({ children, className }) => {
         ease: "back.out(1.7)", // Un 'ease' con más rebote
         stagger: 0.15,
       });
-      
     }, element);
 
     return () => ctx.revert();

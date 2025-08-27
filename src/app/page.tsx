@@ -6,7 +6,7 @@ import LoginButtons from "@/components/ui/login-buttons";
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-background font-sans bg-gradient-to-b from-transparent via-green-400/10 to-blue-500/10 border-t">
+    <div className="relative flex flex-col bg-background font-sans bg-gradient-to-b from-transparent via-green-400/10 to-blue-500/10 border-t">
       <div
         className="absolute inset-0 opacity-30"
         style={{
@@ -14,11 +14,11 @@ export default function Home() {
               linear-gradient(rgba(52, 168, 90, 0.4) 1px, transparent 1px),
               linear-gradient(90deg, rgba(52, 168, 90, 0.4) 1px, transparent 1px)
             `,
-          backgroundSize: "32px 32px",
           maskImage:
             "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,1) 40%)",
           WebkitMaskImage:
             "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,1) 40%)",
+          backgroundSize: "32px 32px",
         }}
       />
       {/* Main Content */}
@@ -95,7 +95,7 @@ export default function Home() {
             <div className="relative h-96 w-full rounded-lg lg:h-full flex flex-col items-center justify-center gap-6">
               <div className="absolute inset-0 flex items-center justify-center">
                 <ASCIIText
-                  text="</hack>"
+                  text="<hack>"
                   enableWaves={true}
                   asciiFontSize={10}
                 />

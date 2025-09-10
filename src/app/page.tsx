@@ -4,6 +4,7 @@ import AnimatedLines from "@/components/animated-lines";
 import ASCIIText from "@/components/ascii-text";
 import LoginButtons from "@/components/ui/login-buttons";
 
+
 export default function Home() {
   return (
     <div className="relative flex flex-col bg-background font-sans bg-gradient-to-b from-transparent via-green-400/10 to-blue-500/10 border-t">

@@ -42,6 +42,20 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Header />
+            <div
+              className="absolute inset-0 opacity-30"
+              style={{
+                backgroundImage: `
+              linear-gradient(rgba(52, 168, 90, 0.4) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(52, 168, 90, 0.4) 1px, transparent 1px)
+            `,
+                maskImage:
+                  "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,1) 40%)",
+                WebkitMaskImage:
+                  "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,1) 40%)",
+                backgroundSize: "32px 32px",
+              }}
+            />
             {children}
           </ThemeProvider>
           <Footer />
